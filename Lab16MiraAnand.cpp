@@ -24,19 +24,28 @@ class Color
         int green;
         int blue;
     // public member functions
-    // using inline functions for setters and getters, since functions are 1 line
+    // using inline functions, since functions are 1 line
     public:
-        // creation of a default constructor
-        // the default constructor initializes RGB hue values to 0
-        Color()                 { red = 0; green = 0; blue = 0; }
-        // creation of a partial constructor
-        // this partial constructor initializes "red" by parameter and initializes "green" and "blue" to 0
-        Color(int r)            { red = r; green = 0; blue = 0; }
-        // creation of another partial constructor
-        // this partial constructor initializes "red" and "green" by parameter and initializes "blue" to 0
-        Color(int r, int g)     { red = r; green = g; blue = 0; }
-        // creation of a full parameter constructor
-        // the full parameter constructor 
+        // creation of a default constructor, Color()
+        // DESCRIPTION: the default constructor initializes all RGB hue values to 0
+        // ARGUMENTS: no arguments/parameters
+        // RETURNS: no return type
+        Color()                     { red = 0; green = 0; blue = 0; }
+        // creation of a partial constructor, Color(int r)
+        // DESCRIPTION: this partial constructor initializes "red" by parameter and initializes "green" and "blue" to 0
+        // ARGUMENTS: int r, represents the red hue value
+        // RETURNS: no return type
+        Color(int r)                { red = r; green = 0; blue = 0; }
+        // creation of another partial constructor, Color(int r, int g)
+        // DESCRIPTION: this partial constructor initializes "red" and "green" by parameter and initializes "blue" to 0
+        // ARGUMENTS: int r and int g, represents the red and green hue values
+        // RETURNS: no return type
+        Color(int r, int g)         { red = r; green = g; blue = 0; }
+        // creation of a full parameter constructor, Color(int r, int g, int b)
+        // DESCRIPTION: the full parameter constructor initializes all RGB hue values by parameter
+        // ARGUMENTS: int r, int g, int b - represents the red, green, and blue hue values
+        // RETURNS: no return type
+        Color(int r, int g, int b)  { red = r; green = g; blue = b; }
 
         // creating all setters together, to keep it organized
         // void setRed(int r), void setGreen(int g), void setBlue(int b) function header
