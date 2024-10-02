@@ -26,6 +26,18 @@ class Color
     // public member functions
     // using inline functions for setters and getters, since functions are 1 line
     public:
+        // creation of a default constructor
+        // the default constructor initializes RGB hue values to 0
+        Color()                 { red = 0; green = 0; blue = 0; }
+        // creation of a partial constructor
+        // this partial constructor initializes "red" by parameter and initializes "green" and "blue" to 0
+        Color(int r)            { red = r; green = 0; blue = 0; }
+        // creation of another partial constructor
+        // this partial constructor initializes "red" and "green" by parameter and initializes "blue" to 0
+        Color(int r, int g)     { red = r; green = g; blue = 0; }
+        // creation of a full parameter constructor
+        // the full parameter constructor 
+
         // creating all setters together, to keep it organized
         // void setRed(int r), void setGreen(int g), void setBlue(int b) function header
         // DESCRIPTION: these functions will "set" the RGB hue values for each Color object
@@ -34,6 +46,7 @@ class Color
         void setRed(int r)      { red = r; }
         void setGreen(int g)    { green = g; }
         void setBlue(int b)     { blue = b; }
+
         // creating all getters together, to keep it organized
         // int getRed() const, int getGreen() const, int getBlue() const function header
         // DESCRIPTION: these functions will "get" the RGB hue values for each Color object after they are "set"
