@@ -89,7 +89,7 @@ int main()
     // creating each Color object separately in order to gain practice with creating various objects and with using the dot operator to access public member functions (print())
     
     // creation of 1st Color object
-    // this object relates to the default constructor - since all RGB hue values were initialized to 0, all RGB hue values will print as 0
+    // this object relates to the default constructor - since all RGB hue values were initialized to 0, all RGB hue values for this object will print as 0
     Color color1;
     // outputting hue values to the console using the object's print() method
     color1.print();
@@ -103,27 +103,24 @@ int main()
     color2.print();
 
     // creation of 3rd Color object
-    Color color3;
+    // this object relates to the second partial constructor
+    // since "red" and "green" were initialized by parameter and "blue" initialized to 0, "red" will print as 109, "green" will print as 18, and "blue" as 0
+    // you can set "red" and "green" to any hue value you would like by replacing the 109 and 18 with other values
+    Color color3(109, 18);
     // outputting hue values to the console using the object's print() method
     color3.print();
 
     // creation of 4th Color object
-    Color color4;
-    // using setters to populate the object with data
-    // populating the object with random number data, rand() % MAX_HUE_VALUE = 0-255
-    color4.setRed(rand() % MAX_HUE_VALUE);
-    color4.setGreen(rand() % MAX_HUE_VALUE);
-    color4.setBlue(rand() % MAX_HUE_VALUE);
+    // this object relates to the full parameter constructor
+    // since all RGB hue values were initialized by parameter, all RGB hue values for this object will print as random numbers within the range 0-255
+    // rand() % MAX_HUE_VALUE = 0-255
+    // you are able to change the parameters and set all RGB hue values to anything you would like
+    Color color4(rand() % MAX_HUE_VALUE, rand() % MAX_HUE_VALUE, rand() % MAX_HUE_VALUE);
     // outputting hue values to the console using the object's print() method
     color4.print();
 
     // creation of 5th Color object
-    Color color5;
-    // using setters to populate the object with data
-    // populating the object with random number data, rand() % MAX_HUE_VALUE = 0-255
-    color5.setRed(rand() % MAX_HUE_VALUE);
-    color5.setGreen(rand() % MAX_HUE_VALUE);
-    color5.setBlue(rand() % MAX_HUE_VALUE);
+    Color color5(255, 192, 203);
     // outputting hue values to the console using the object's print() method
     color5.print();
 
