@@ -9,7 +9,7 @@
 using namespace std;
 
 // declaration and initialization of a const int variable to represent the maximum RGB hue value
-// creation of this variable will help to generate a random number for an object's RGB hue values in main()
+// creation of this variable will help to generate random numbers for an object's RGB hue values in main()
 // initializing the variable with the value 256 because rand() % 256 = 0-255, which is the range of possible values for each hue according to the RGB color model
 const int MAX_HUE_VALUE = 256;
 // declaration and initialization of a const int variable to use with setw() to neatly format output
@@ -97,15 +97,15 @@ int main()
     // creation of 2nd Color object
     // this object relates to the first partial constructor
     // since "red" was initialized by parameter and "blue" and "green" initialized to 0, "red" will print as 100 and "blue" and "green" as 0
-    // you can set "red" to any hue value you would like by replacing the 100 with another value
+    // you can set "red" to any hue value you would like by replacing 100 with another value
     Color color2(100);
     // outputting hue values to the console using the object's print() method
     color2.print();
 
     // creation of 3rd Color object
     // this object relates to the second partial constructor
-    // since "red" and "green" were initialized by parameter and "blue" initialized to 0, "red" will print as 109, "green" will print as 18, and "blue" as 0
-    // you can set "red" and "green" to any hue value you would like by replacing the 109 and 18 with other values
+    // since "red" and "green" were initialized by parameter and "blue" initialized to 0, "red" will print as 109, "green" as 18, and "blue" as 0
+    // you can set "red" and "green" to any hue value you would like by replacing 109 and 18 with other values
     Color color3(109, 18);
     // outputting hue values to the console using the object's print() method
     color3.print();
@@ -114,12 +114,16 @@ int main()
     // this object relates to the full parameter constructor
     // since all RGB hue values were initialized by parameter, all RGB hue values for this object will print as random numbers within the range 0-255
     // rand() % MAX_HUE_VALUE = 0-255
-    // you are able to change the parameters and set all RGB hue values to anything you would like
+    // you are able to change the parameters and set RGB hue values to anything you would like
     Color color4(rand() % MAX_HUE_VALUE, rand() % MAX_HUE_VALUE, rand() % MAX_HUE_VALUE);
     // outputting hue values to the console using the object's print() method
     color4.print();
 
     // creation of 5th Color object
+    // this object also relates to the full parameter constructor
+    // since all RGB hue values were initialized by parameter, "red" will print as 255, "green" as 192, and "blue" as 203
+    // 255, 192, 203 is the RGB hue value combination for the color "pink"
+    // you are able to change the parameters and set RGB hue values to anything you would like
     Color color5(255, 192, 203);
     // outputting hue values to the console using the object's print() method
     color5.print();
